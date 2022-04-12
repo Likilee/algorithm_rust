@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["two_sum","Two Sum / Easy(leet code)"]]});
+initSidebarItems({"mod":[["add_two_numbers","Add Two numbers / Medium(leet code)"],["two_sum","Two Sum / Easy(leet code)"]]});
