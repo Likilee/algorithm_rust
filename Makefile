@@ -9,4 +9,4 @@ doc-build:
 	rm -rf ./docs
 	echo "<meta http-equiv=\"refresh\" content=\"0; url=algorithm/index.html\">" > target/doc/index.html
 	cp -r target/doc ./docs
-.PHONEY: test doc
+.PHONEY: test doc	doc-build

@@ -44,7 +44,7 @@
 
 #[cfg(test)]
 mod test {
-	use super::*;
+	// use super::*;
 	// #[test]
 	// fn case_1() {
 	// 	let mut l1 = Box::new(ListNode::new(5));
@@ -75,13 +75,6 @@ impl ListNode {
 	fn new(val: i32) -> Self {
 		ListNode { next: None, val }
 	}
-
-	fn push(&mut self, val: i32) {
-		match &mut self.next {
-			None => self.next = Some(Box::new(ListNode::new(val))),
-			Some(n) => self.push(val),
-		}
-	}
 }
 pub struct Solution {}
 
@@ -104,10 +97,7 @@ impl Solution {
 		match (node1, node2) {
 			(None, None) => {
 				if increment > 0 {
-					return Some(Box::new(ListNode {
-						next: None,
-						val: increment,
-					}));
+					return Some(Box::new(ListNode::new(increment)));
 				}
 				return None;
 			}

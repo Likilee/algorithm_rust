@@ -120,16 +120,6 @@
 <span id="118">118</span>
 <span id="119">119</span>
 <span id="120">120</span>
-<span id="121">121</span>
-<span id="122">122</span>
-<span id="123">123</span>
-<span id="124">124</span>
-<span id="125">125</span>
-<span id="126">126</span>
-<span id="127">127</span>
-<span id="128">128</span>
-<span id="129">129</span>
-<span id="130">130</span>
 </pre><pre class="rust"><code><span class="doccomment">//! # Add Two numbers / Medium(leet code)</span>
 <span class="doccomment">//! [문제 링크](https://leetcode.com/problems/add-two-numbers/)</span>
 <span class="doccomment">//!</span>
@@ -176,7 +166,7 @@
 
 <span class="attribute">#[<span class="ident">cfg</span>(<span class="ident">test</span>)]</span>
 <span class="kw">mod</span> <span class="ident">test</span> {
-	<span class="kw">use</span> <span class="kw">super</span>::<span class="kw-2">*</span>;
+	<span class="comment">// use super::*;</span>
 	<span class="comment">// #[test]</span>
 	<span class="comment">// fn case_1() {</span>
 	<span class="comment">// 	let mut l1 = Box::new(ListNode::new(5));</span>
@@ -207,13 +197,6 @@
 	<span class="kw">fn</span> <span class="ident">new</span>(<span class="ident">val</span>: <span class="ident">i32</span>) -&gt; <span class="self">Self</span> {
 		<span class="ident">ListNode</span> { <span class="ident">next</span>: <span class="prelude-val">None</span>, <span class="ident">val</span> }
 	}
-
-	<span class="kw">fn</span> <span class="ident">push</span>(<span class="kw-2">&amp;mut</span> <span class="self">self</span>, <span class="ident">val</span>: <span class="ident">i32</span>) {
-		<span class="kw">match</span> <span class="kw-2">&amp;mut</span> <span class="self">self</span>.<span class="ident">next</span> {
-			<span class="prelude-val">None</span> =&gt; <span class="self">self</span>.<span class="ident">next</span> <span class="op">=</span> <span class="prelude-val">Some</span>(<span class="ident">Box::new</span>(<span class="ident">ListNode::new</span>(<span class="ident">val</span>))),
-			<span class="prelude-val">Some</span>(<span class="ident">n</span>) =&gt; <span class="self">self</span>.<span class="ident">push</span>(<span class="ident">val</span>),
-		}
-	}
 }
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Solution</span> {}
 
@@ -236,10 +219,7 @@
 		<span class="kw">match</span> (<span class="ident">node1</span>, <span class="ident">node2</span>) {
 			(<span class="prelude-val">None</span>, <span class="prelude-val">None</span>) =&gt; {
 				<span class="kw">if</span> <span class="ident">increment</span> <span class="op">&gt;</span> <span class="number">0</span> {
-					<span class="kw">return</span> <span class="prelude-val">Some</span>(<span class="ident">Box::new</span>(<span class="ident">ListNode</span> {
-						<span class="ident">next</span>: <span class="prelude-val">None</span>,
-						<span class="ident">val</span>: <span class="ident">increment</span>,
-					}));
+					<span class="kw">return</span> <span class="prelude-val">Some</span>(<span class="ident">Box::new</span>(<span class="ident">ListNode::new</span>(<span class="ident">increment</span>)));
 				}
 				<span class="kw">return</span> <span class="prelude-val">None</span>;
 			}
