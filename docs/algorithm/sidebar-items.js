@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["add_two_numbers","Add Two numbers / Medium(leet code)"],["longest_substring","Longest Substring Without Repeating Characters / medium(leet code)"],["two_sum","Two Sum / Easy(leet code)"]]});
+initSidebarItems({"mod":[["add_two_numbers","Add Two numbers / Medium(leet code)"],["binary_search","Binary Search / easy(leet code)"],["longest_substring","Longest Substring Without Repeating Characters / medium(leet code)"],["two_sum","Two Sum / Easy(leet code)"]]});
