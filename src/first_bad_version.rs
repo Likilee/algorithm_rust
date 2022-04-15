@@ -36,6 +36,10 @@ use std::cmp::min;
 pub struct Solution {}
 
 impl Solution {
+	/// is just dummy method
+	pub fn isBadVersion(&self, n: i32) -> bool {
+		true
+	}
 	pub fn first_bad_version(&self, n: i32) -> i32 {
 		let mut left = 1;
 		let mut right = n;

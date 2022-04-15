@@ -6,4 +6,5 @@ pub mod add_two_numbers;
 pub mod binary_search;
 pub mod first_bad_version;
 pub mod longest_substring;
+pub mod search_insert_position;
 pub mod two_sum;
