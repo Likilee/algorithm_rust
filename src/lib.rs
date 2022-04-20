@@ -7,4 +7,5 @@ pub mod binary_search;
 pub mod first_bad_version;
 pub mod longest_substring;
 pub mod search_insert_position;
+pub mod squares_of_a_sorted_array;
 pub mod two_sum;
